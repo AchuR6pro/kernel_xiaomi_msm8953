@@ -16,8 +16,14 @@
 / {
         firmware: firmware {
                 android {
-			/delete-node/ fstab;
-                        /delete-node/ vbmeta;
+                        boot_devices = "soc/4744000.sdhci";
+			vbmeta {
+			parts = "vbmeta,boot,system,vendor,dtbo,recovery";
+		};
+
+		fstab {
+			vendor {
+				status = "disabled";
                 };
         };
 };
