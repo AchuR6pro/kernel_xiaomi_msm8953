@@ -1,1 +1,2 @@
 ../msm8953-perf_defconfig
+CONFIG_INITRAMFS_IGNORE_SKIP_FLAG=y
